@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polo Robles Esculturas</title>
-    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/contactos.css">
+    
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -44,93 +45,52 @@
         </nav>
 
     </header>
-    <!-- Mi parte principal -->
-    <section class="data">
-        <div class="container-grid">
-            <div class="item item-1">
-                <h4>Quienes somos...</h4>
-                <p>Somos una empresa familiar que se dedica  a la molderia y reproducción de todo tipos de piezas y materiales.</p>
-            </div>
-            <div class="map-responsive">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210147
-                .4749590797!2d-58.59811024378051!3d-34.61543035272393!2m3!1f0!2f0!3f0!3m2!
-                1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2s
-                Buenos%20Aires%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!
-                1ses!2sar!4v1712753926685!5m2!1ses!2sar" width="600" height="450" style="border:0;"
-                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="item item-3">Item 3</div>
-            <div class="item item-4">Item 4</div>
-        </div>
-    </section>
+    
 
     <section class="contact">
         <!-- formulario de contacto en html y css -->
 
-        <div class="contact_form">
-
-            <div class="formulario">
-                <h1>Formulario de contacto</h1>
-                <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
-
-
-                <form action="submeter-formulario.php" method="post">
-
-
-                    <p>
-                        <label for="nombre" class="colocar_nombre">Nombre
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
-                            placeholder="Escribe tu nombre">
-                    </p>
-
-                    <p>
-                        <label for="email" class="colocar_email">Email
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="email" name="introducir_email" id="email" required="obligatorio"
-                            placeholder="Escribe tu Email">
-                    </p>
-
-                    <p>
-                        <label for="telefone" class="colocar_telefono">Teléfono
-                        </label>
-                        <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
-                    </p>
-
-                    <p>
-                        <label for="website" class="colocar_website">Sitio web
-                        </label>
-                        <input type="url" name="introducir_website" id="website" placeholder="Escribe la URL de tu web">
-                    </p>
-
-                    <p>
-                        <label for="asunto" class="colocar_asunto">Asunto
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="text" name="introducir_asunto" id="assunto" required="obligatorio"
-                            placeholder="Escribe un asunto">
-                    </p>
-
-                    <p>
-                        <label for="mensaje" class="colocar_mensaje">Mensaje
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio"
-                            placeholder="Deja aquí tu comentario..."></textarea>
-                    </p>
-
-                    <button class="button-contact" type="submit" name="enviar_formulario" id="enviar">
-                        <p>Enviar</p>
-                    </button>
-
-                    <p class="aviso">
-                        <span class="obligatorio"> * </span>los campos son obligatorios.
-                    </p>
-
-                </form>
-            </div>
+        <div class="form-container">
+            <h2>Formulario de Contacto</h2>
+            <form id="contactForm" action="#" method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="motivo">Motivo de Contacto:</label>
+                    <select id="motivo" name="motivo" required>
+                        <option value="">Selecciona un motivo</option>
+                        <option value="consulta">Consulta</option>
+                        <option value="sugerencia">Sugerencia</option>
+                        <option value="queja">Queja</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Preferencias de contacto:</label><br>
+                    <input type="checkbox" id="preferencia_email" name="preferencia_contacto" value="email">
+                    <label for="preferencia_email">Email</label><br>
+                    <input type="checkbox" id="preferencia_telefono" name="preferencia_contacto" value="telefono">
+                    <label for="preferencia_telefono">Teléfono</label><br>
+                    <input type="checkbox" id="preferencia_whatsapp" name="preferencia_contacto" value="whatsapp">
+                    <label for="preferencia_whatsapp">WhatsApp</label>
+                </div>
+                <div class="form-group">
+                    <label for="archivo">Adjuntar archivo:</label>
+                    <input type="file" id="archivo" name="archivo">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
         </div>
 
     </section>
